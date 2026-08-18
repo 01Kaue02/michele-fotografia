@@ -113,3 +113,23 @@ h1, h2, h3 {
   text-align: center;
   padding: 2rem;
 }
+.btn-horario {
+  padding: 0.6rem 1.2rem;
+  margin: 0.3rem;
+  border: 2px solid var(--color-roxo-destaque);
+  background: var(--color-branco);
+  color: var(--color-roxo-destaque);
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: var(--font-texto);
+  transition: all 0.2s ease;
+}
+
+.btn-horario:hover {
+  background: var(--color-lavanda);
+}
+
+.btn-horario.selecionado {
+  background: var(--color-roxo-destaque);
+  color: var(--color-branco);
+}

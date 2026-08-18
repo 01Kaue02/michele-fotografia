@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agendar | Michele Fernanda Fotografias</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-container">
+      <a href="index.html" class="logo">Michele Fernanda <span>Fotografias</span></a>
+    </div>
+  </header>
+
+  <main class="pagina-agendamento">
+    <h1>Agendar sessão</h1>
+    <p id="nome-servico-selecionado"></p>
+
+    <!-- ETAPA 1: escolher a data -->
+    <section id="etapa-data" class="etapa">
+      <h2>1. Escolha a data</h2>
+      <input type="date" id="input-data">
+      <button id="btn-buscar-horarios" class="btn btn-primary">Ver horários</button>
+    </section>
+
+    <!-- ETAPA 2: escolher o horário (some até ter data escolhida) -->
+    <section id="etapa-horarios" class="etapa" style="display: none;">
+      <h2>2. Escolha o horário</h2>
+      <div id="lista-horarios"></div>
+    </section>
+
+    <!-- ETAPA 3: dados do cliente (some até ter horário escolhido) -->
+    <section id="etapa-dados" class="etapa" style="display: none;">
+      <h2>3. Seus dados</h2>
+      <input type="text" id="input-nome" placeholder="Seu nome completo">
+      <input type="tel" id="input-telefone" placeholder="Seu telefone/WhatsApp">
+      <textarea id="input-observacoes" placeholder="Observações (opcional)"></textarea>
+      <button id="btn-confirmar" class="btn btn-primary">Confirmar agendamento</button>
+    </section>
+
+    <!-- Mensagem final -->
+    <section id="etapa-confirmacao" class="etapa" style="display: none;">
+      <h2>✅ Agendamento confirmado!</h2>
+      <p id="mensagem-confirmacao"></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Michele Fernanda Fotografias</p>
+  </footer>
+
+  <script src="js/agendar.js"></script>
+</body>
+</html>

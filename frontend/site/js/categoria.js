@@ -25,8 +25,9 @@ function renderizarServicos(servicos) {
     container.innerHTML = '<p>Nenhum serviço cadastrado nessa categoria ainda.</p>';
     return;
   }
+  
 
-  container.innerHTML = servicos.map(servico => `
+ container.innerHTML = servicos.map(servico => `
     <div class="item-servico">
       <div>
         <h3>${servico.nome}</h3>
@@ -36,6 +37,7 @@ function renderizarServicos(servicos) {
         ${servico.preco_antigo ? `<span class="preco-antigo">R$ ${servico.preco_antigo}</span>` : ''}
         <span class="preco-atual">R$ ${servico.preco_atual}</span>
       </div>
+      <a href="agendar.html?servico_id=${servico.id}" class="btn btn-primary">Agendar</a>
     </div>
   `).join('');
 }
