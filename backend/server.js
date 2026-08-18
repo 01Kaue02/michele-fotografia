@@ -3,12 +3,16 @@ const express = require('express');
 const cors = require('cors');
 const pool = require('./config/database');
 const servicosRoutes = require('./routes/servicosRoutes');
+const horariosRoutes = require('./routes/horariosRoutes');
+const agendamentosRoutes = require('./routes/agendamentosRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json());
+app.use('/api/horarios', horariosRoutes);
+app.use('/api/agendamentos', agendamentosRoutes);
 
 app.use('/api/servicos', servicosRoutes);
 
