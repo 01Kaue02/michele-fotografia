@@ -5,6 +5,8 @@ const pool = require('./config/database');
 const servicosRoutes = require('./routes/servicosRoutes');
 const horariosRoutes = require('./routes/horariosRoutes');
 const agendamentosRoutes = require('./routes/agendamentosRoutes');
+const horarioPadraoRoutes = require('./routes/horarioPadraoRoutes');
+const excecoesRoutes = require('./routes/excecoesRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -13,9 +15,9 @@ app.use(cors());
 app.use(express.json());
 app.use('/api/horarios', horariosRoutes);
 app.use('/api/agendamentos', agendamentosRoutes);
-
 app.use('/api/servicos', servicosRoutes);
-
+app.use('/api/horario-padrao', horarioPadraoRoutes);
+app.use('/api/excecoes', excecoesRoutes);
 // Rota simples só para testar se o servidor e o banco estão funcionando
 app.get('/api/teste-conexao', async (req, res) => {
   try {

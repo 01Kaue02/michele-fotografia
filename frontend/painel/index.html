@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel | Michele Fernanda Fotografias</title>
+  <link rel="stylesheet" href="css/painel.css">
+</head>
+<body>
+
+  <header class="painel-header">
+    <h1>Painel Administrativo</h1>
+    <p>Michele Fernanda Fotografias</p>
+  </header>
+
+  <main class="painel-main">
+
+    <section class="painel-secao">
+      <h2>Horário Padrão da Semana</h2>
+      <p class="ajuda">Defina os horários em que você normalmente atende. Isso vale como padrão, a menos que você cadastre uma exceção para um dia específico.</p>
+
+      <div id="dias-semana" class="dias-semana">
+        <!-- Gerado dinamicamente pelo JS -->
+      </div>
+    </section>
+
+    <section class="painel-secao">
+      <h2>Exceções</h2>
+      <p class="ajuda">Use aqui quando um dia específico for diferente do padrão (fechado, ou com horário reduzido).</p>
+
+      <form id="form-excecao" class="form-excecao">
+        <input type="date" id="input-excecao-data" required>
+
+        <label class="checkbox-label">
+          <input type="checkbox" id="input-excecao-fechado">
+          Fechado o dia todo
+        </label>
+
+        <div id="campos-horario-excecao" class="campos-horario">
+          <input type="time" id="input-excecao-inicio" placeholder="Início">
+          <input type="time" id="input-excecao-fim" placeholder="Fim">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Adicionar exceção</button>
+      </form>
+
+      <div id="lista-excecoes" class="lista-excecoes">
+        <!-- Gerado dinamicamente pelo JS -->
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/horarios.js"></script>
+</body>
+</html>

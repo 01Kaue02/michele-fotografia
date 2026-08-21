@@ -1,0 +1,132 @@
+:root {
+  --color-lavanda: #f3eefb;
+  --color-branco: #ffffff;
+  --color-roxo-escuro: #2e1065;
+  --color-roxo-destaque: #6d28d9;
+  --font-titulo: 'Playfair Display', serif;
+  --font-texto: 'Inter', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-texto);
+  background-color: var(--color-lavanda);
+  color: var(--color-roxo-escuro);
+}
+
+.painel-header {
+  background: var(--color-roxo-escuro);
+  color: var(--color-branco);
+  padding: 2rem;
+}
+
+.painel-header h1 {
+  font-family: var(--font-titulo);
+}
+
+.painel-main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.painel-secao {
+  background: var(--color-branco);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.painel-secao h2 {
+  font-family: var(--font-titulo);
+  margin-bottom: 0.5rem;
+}
+
+.ajuda {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.dia-semana-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.dia-semana-item .nome-dia {
+  width: 100px;
+  font-weight: 600;
+}
+
+.dia-semana-item input[type="time"] {
+  padding: 0.4rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.dia-semana-item .btn-salvar-dia {
+  margin-left: auto;
+}
+
+.form-excecao {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.campos-horario {
+  display: flex;
+  gap: 0.5rem;
+}
+
+input[type="date"], input[type="time"] {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.btn {
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: var(--color-roxo-destaque);
+  color: var(--color-branco);
+}
+
+.item-excecao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem;
+  border-bottom: 1px solid #eee;
+}
+
+.btn-excluir {
+  background: #e11d48;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.3rem 0.8rem;
+  cursor: pointer;
+}
